@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="#333333"
+             x:Class="csharp_grund_lab3.MainPage">
+
+
+    <StackLayout Orientation="Vertical"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="Center"
+                 Padding="16">
+
+
+        <!-- Header -->
+
+        <Frame CornerRadius="8"
+               Padding="16"
+               BackgroundColor="CornflowerBlue"
+               HasShadow="False">
+
+            <Label Text="MomsUträknare"
+                   FontSize="24"
+                   TextColor="White"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="FillAndExpand" />
+
+        </Frame>
+
+
+        <Frame CornerRadius="8"
+               Padding="16"
+               BackgroundColor='White'
+               HasShadow="False">
+
+            <!-- Inmatat Belopp -->
+
+            <Grid HorizontalOptions="FillAndExpand"
+                  ColumnSpacing="16">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label FontSize="14"
+                       Text="Inmatat Belopp:"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       Grid.ColumnSpan="2"
+                       Grid.Row="0" Grid.Column="0" />
+
+                <Entry x:Name="InputBelopp"
+                       FontSize="14"
+                       Keyboard="Numeric"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       Placeholder="0"
+                       Grid.ColumnSpan="2"
+                       Grid.Row="0" Grid.Column="2" />
+
+                <Label FontSize="14"
+                       Text="SEK"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       Grid.Row="0" Grid.Column="4" />
+
+            </Grid>
+
+        </Frame>
+
+
+        <!-- Output Layout -->
+
+        <Frame CornerRadius="8"
+               Padding="16"
+               BackgroundColor='White'
+               HasShadow="False">
+
+            <Grid HorizontalOptions="FillAndExpand"
+                  ColumnSpacing="16"
+                  RowSpacing="16">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+
+                <!-- Moms Sats -->
+
+                <Label FontSize="14"
+                       Text="Moms Sats:"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       Grid.ColumnSpan="2"
+                       Grid.Row="0" Grid.Column="0" />
+
+                <Label x:Name="OutputMomsSats"
+                       FontSize="14"
+                       Text="0"
+                       HorizontalTextAlignment="End"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       Grid.ColumnSpan="2"
+                       Grid.Row="0" Grid.Column="2" />
+
+                <Label FontSize="14"
+                       Text="%"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       Grid.Row="0" Grid.Column="4" />
+
+
+                <!-- Uträknat Belopp -->
+
+                <Label FontSize="14"
+                       Text="Uträknat Belopp:"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       Grid.ColumnSpan="2"
+                       Grid.Row="1" Grid.Column="0" />
+
+                <Label x:Name="OutputUtraknatBelopp"
+                       FontSize="14"
+                       Text="0.00"
+                       HorizontalTextAlignment="End"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       Grid.ColumnSpan="2"
+                       Grid.Row="1" Grid.Column="2" />
+
+                <Label FontSize="14"
+                       Text="SEK"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       Grid.Row="1" Grid.Column="4" />
+
+
+                <!-- Uträknad Moms -->
+
+                <Label FontSize="14"
+                       Text="Uträknad Moms:"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       Grid.ColumnSpan="2"
+                       Grid.Row="2" Grid.Column="0" />
+
+                <Label x:Name="OutputUtraknadMoms"
+                       FontSize="14"
+                       Text="0.00"
+                       HorizontalTextAlignment="End"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       Grid.ColumnSpan="2"
+                       Grid.Row="2" Grid.Column="2" />
+
+                <Label FontSize="14"
+                       Text="SEK"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       Grid.Row="2" Grid.Column="4" />
+
+            </Grid>
+
+        </Frame>
+
+
+        <!-- Moms Knappar -->
+
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="FillAndExpand">
+
+            <Button x:Name="moms8"
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    Text="8%"
+                    BorderRadius="8"
+                    BackgroundColor="CornflowerBlue"
+                    TextColor="White"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="Calculate" />
+
+            <Button x:Name="moms12"
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    Text="12%"
+                    BorderRadius="8"
+                    BackgroundColor="CornflowerBlue"
+                    TextColor="White"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="Calculate" />
+
+            <Button x:Name="moms25"
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    Text="25%"
+                    BorderRadius="8"
+                    BackgroundColor="CornflowerBlue"
+                    TextColor="White"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="Calculate" />
+
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>

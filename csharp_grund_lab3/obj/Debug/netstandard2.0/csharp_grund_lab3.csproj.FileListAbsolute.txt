@@ -1,0 +1,11 @@
+/Users/kjunit/Projects/csharp_grund_lab3/csharp_grund_lab3/bin/Debug/netstandard2.0/csharp_grund_lab3.deps.json
+/Users/kjunit/Projects/csharp_grund_lab3/csharp_grund_lab3/bin/Debug/netstandard2.0/csharp_grund_lab3.dll
+/Users/kjunit/Projects/csharp_grund_lab3/csharp_grund_lab3/bin/Debug/netstandard2.0/csharp_grund_lab3.pdb
+/Users/kjunit/Projects/csharp_grund_lab3/csharp_grund_lab3/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/kjunit/Projects/csharp_grund_lab3/csharp_grund_lab3/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/kjunit/Projects/csharp_grund_lab3/csharp_grund_lab3/obj/Debug/netstandard2.0/csharp_grund_lab3.AssemblyInfoInputs.cache
+/Users/kjunit/Projects/csharp_grund_lab3/csharp_grund_lab3/obj/Debug/netstandard2.0/csharp_grund_lab3.AssemblyInfo.cs
+/Users/kjunit/Projects/csharp_grund_lab3/csharp_grund_lab3/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/kjunit/Projects/csharp_grund_lab3/csharp_grund_lab3/obj/Debug/netstandard2.0/csharp_grund_lab3.dll
+/Users/kjunit/Projects/csharp_grund_lab3/csharp_grund_lab3/obj/Debug/netstandard2.0/csharp_grund_lab3.pdb
+/Users/kjunit/Projects/csharp_grund_lab3/csharp_grund_lab3/obj/Debug/netstandard2.0/csharp_grund_lab3.csprojAssemblyReference.cache
